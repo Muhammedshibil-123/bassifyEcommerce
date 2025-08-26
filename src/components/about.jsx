@@ -30,7 +30,7 @@ function About() {
         something that matches your vibe.
       </p>
       <p>
-        At <strong>[Your Website Name]</strong>, we handpick every product with
+        At <strong>Bassify</strong>, we handpick every product with
         one goal in mind—delivering the best sound quality at the best value.
         Because when sound is pure, life feels better.
       </p>
