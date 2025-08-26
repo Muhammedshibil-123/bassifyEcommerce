@@ -1,0 +1,265 @@
+import { NavLink } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
+import './shop.css'
+import { useNavigate } from "react-router-dom";
+import { FaHeart } from "react-icons/fa";
+import { CartContext } from "../component/cartcouter";
+
+
+
+function Shop() {
+  const [products, setProducts] = useState([]);
+  const userId = (localStorage.getItem("id"))
+  const [sortType, setSortType] = useState('default')
+  const [typesort, setTypesort] = useState('types')
+  const [brandsort, setBrandsort] = useState('brand')
+  const navigate = useNavigate()
+   const [wishlist, setWishlist] = useState([])
+
+   const {updateCartCount} = useContext(CartContext)
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/products")
+      .then((res) => setProducts(res.data))
+      .catch((err) => console.log(err));
+
+      if(userId){
+        axios.get(`http://localhost:3001/users/${userId}`)
+        .then((res)=>setWishlist(res.data.whishlist || []))
+      }
+  }, [userId]);
+
+  async function CartHandleChange(product) {
+    if (!userId) {
+      toast.error("Please log in to add to cart ", 
+        { positon: 'top-center' ,
+          autoClose: 1300,
+        style: { marginTop: '60px' }
+        })
+      return
+    }
+
+    const userRespone = await axios.get(`http://localhost:3001/users/${userId}`)
+    const userData = userRespone.data
+    const currenCart = userData.cart || []
+
+    const existingItem = currenCart.findIndex((item) => item.productId === product.id)
+    let updatedCart;
+
+    if (existingItem !== -1) {
+      toast.warn('Product already in cart', {
+        positon: 'top-center',
+        autoClose: 1300,
+        style: { marginTop: '60px' }
+      })
+    } else {
+      updatedCart = [
+        ...currenCart,
+        {
+          productId: product.id,
+          title: product.title,
+          price: product.price,
+          image: product.image,
+          quantity: 1,
+        },
+      ]
+      toast.success('Item added to Cart', {
+        positon: 'top-center',
+        autoClose: 1300,
+        style: { marginTop: '60px' }
+      })
+
+      await axios.put(`http://localhost:3001/users/${userId}`, {
+        ...userData,
+        cart: updatedCart,
+      })
+      updateCartCount()
+    }
+
+  }
+
+  const searchItem = (localStorage.getItem('search') || "").toLowerCase()
+
+  let filterProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchItem) ||
+    product.brand.toLowerCase().includes(searchItem) ||
+    product.description.toLowerCase().includes(searchItem)
+  )
+
+  if (sortType === 'low to high') {
+    filterProducts.sort((a, b) => a.price - b.price)
+
+  } else if (sortType === 'high to low') {
+    filterProducts.sort((a, b) => b.price - a.price)
+  }
+
+
+  if (typesort === 'headphone') {
+    filterProducts = filterProducts.filter((product) =>
+      product.type.toLowerCase().includes('headphone')
+    )
+  } else if (typesort === 'headset') {
+    filterProducts = filterProducts.filter((product) =>
+      product.type.toLowerCase().includes('headset')
+    )
+  } else if (typesort === 'earbuds') {
+    filterProducts = filterProducts.filter((product) =>
+      product.type.toLowerCase().includes('earbuds')
+    )
+  } else if (typesort === 'neckband') {
+    filterProducts = filterProducts.filter((product) =>
+      product.type.toLowerCase().includes('neckband')
+    )
+  } else if (typesort === 'speaker') {
+    filterProducts = filterProducts.filter((product) =>
+      product.type.toLowerCase().includes('speaker')
+    )
+  }
+
+  if (brandsort === 'boat') {
+    filterProducts = filterProducts.filter((product) =>
+      product.brand.toLowerCase().includes('boat')
+    )
+  } else if (brandsort === 'oneplus') {
+    filterProducts = filterProducts.filter((product) =>
+      product.brand.toLowerCase().includes('oneplus')
+    )
+  } else if (brandsort === 'realme') {
+    filterProducts = filterProducts.filter((product) =>
+      product.brand.toLowerCase().includes('realme')
+    )
+  } else if (brandsort === 'apple') {
+    filterProducts = filterProducts.filter((product) =>
+      product.brand.toLowerCase().includes('apple')
+    )
+  } else if (brandsort === 'sony') {
+    filterProducts = filterProducts.filter((product) =>
+      product.brand.toLowerCase().includes('sony')
+    )
+  } else if (brandsort === 'jbl') {
+    filterProducts = filterProducts.filter((product) =>
+      product.brand.toLowerCase().includes('jbl')
+    )
+  }
+
+  //  function showMoreHandle(){
+  //    navigate(`/${filterProducts.id}`)
+  //  }
+
+   async function WhishlistHandleChange(product){
+     if (!userId) {
+      toast.error("Please log in to add to Whislist ", 
+        { positon: 'top-center' ,
+          autoClose: 1300,
+        style: { marginTop: '60px' }
+        })
+      return
+    }
+
+    const userRespone = await axios.get(`http://localhost:3001/users/${userId}`)
+    const userData = userRespone.data
+    const currenwhishlist = userData.whishlist || []
+
+    const existingItem = currenwhishlist.findIndex((item) => item.productId === product.id)
+    let updatedwihislist;
+
+    if (existingItem !== -1) {
+      toast.warn('Product already in whishlist', {
+        positon: 'top-center',
+        autoClose: 1300,
+        style: { marginTop: '60px' }
+      })
+    } else {
+      updatedwihislist = [
+        ...currenwhishlist,
+        {
+          productId: product.id,
+          title: product.title,
+          price: product.price,
+          image: product.image,
+          quantity: 1,
+        },
+      ]
+      toast.success('Item added to Whishlist', {
+        positon: 'top-center',
+        autoClose: 1300,
+        style: { marginTop: '60px' }
+      })
+
+      await axios.put(`http://localhost:3001/users/${userId}`, {
+        ...userData,
+        whishlist: updatedwihislist,
+      })
+      setWishlist(updatedwihislist)
+    }
+
+  }
+
+
+   
+   function whishlistcolor(productId){
+      return wishlist.find((item)=>item.productId===productId)
+   }
+  
+    return (
+      <>
+        <div className="filters-container">
+          <select name="" id="" value={sortType} onChange={(e) => setSortType(e.target.value)}>
+            <option value="default">Default</option>
+            <option value="low to high">Low to high</option>
+            <option value="high to low">High to low </option>
+          </select>
+          <select name="" id="" value={typesort} onChange={(e) => setTypesort(e.target.value)}>
+            <option value="types">Product Type</option>
+            <option value="headphone">Headphone</option>
+            <option value="headset">Headset</option>
+            <option value="earbuds">Earbuds</option>
+            <option value="neckband">Neckband</option>
+            <option value="speaker">Speaker</option>
+          </select>
+          <select name="" id="" value={brandsort} onChange={(e) => setBrandsort(e.target.value)} >
+            <option value="brand">Brand</option>
+            <option value="boat">boAt</option>
+            <option value="oneplus">OnePlus</option>
+            <option value="realme">Realme</option>
+            <option value="apple">Apple</option>
+            <option value="sony">Sony</option>
+            <option value="jbl">JBL</option>
+          </select>
+        </div>
+
+        <div className="main-shop-container">
+          {filterProducts.map((product, index) => (
+            <div className="shop-container" key={index}>
+            
+              <div className="whislist-contaniner"
+               onClick={() => WhishlistHandleChange(product)}>
+              <FaHeart  style={{
+                color:whishlistcolor(product.id)?'red':'gray',
+                width:'20px',
+                height:'20px'
+                }} />
+              </div>
+              <NavLink to={`/${product.id}`} style={{textDecoration:'none'}}> 
+              <div >
+              <img src={product.image} alt="" />
+              <h3>{product.title}</h3>
+              <h4>{product.brand}</h4>
+              <p className="description"> {product.description}</p>
+              <p className="price">₹{product.price}</p>
+              </div>
+              </NavLink>
+              <button className="addtocart" onClick={() => CartHandleChange(product)}>Add to Cart</button>
+
+
+            </div>
+          ))}
+        </div>
+      </>
+    );
+  }
+
+  export default Shop;
