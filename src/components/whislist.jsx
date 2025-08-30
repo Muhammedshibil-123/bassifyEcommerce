@@ -4,6 +4,7 @@ import './cart.css'
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { CartContext } from "../component/cartcouter";
+import { WishlistContext } from "../component/whislistcouter";
 
 
 
@@ -14,6 +15,7 @@ function Whislist() {
   const userId = (localStorage.getItem("id"))
   const navigate = useNavigate()
   const {updateCartCount} = useContext(CartContext)
+  const {updateWhislistCount} = useContext(WishlistContext)
 
   useEffect(() => {
     axios.get(`http://localhost:3001/users/${userId}`)
@@ -28,7 +30,7 @@ function Whislist() {
     }
     setUser(updatedwhishlist)
     axios.put(`http://localhost:3001/users/${userId}`, updatedwhishlist)
-      .then()
+      .then((res)=>updateWhislistCount())
       .catch((err) => console.log(err))
   }
 

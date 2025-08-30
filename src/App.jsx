@@ -18,6 +18,10 @@ import Whislist from './components/whislist'
 import Myorders from './components/myorders'
 import About from './components/about'
 import {CartProvider} from './component/cartcouter'
+import {WhishlistProvider} from './component/whislistcouter'
+import Dashbaord from './Admin/dashboard'
+import Adminprotected from './Admin/adminprotected'
+import Users from './Admin/users'
 
 
 function App() {
@@ -25,7 +29,7 @@ function App() {
   
   const ConditonNavbar=()=>{
     const location=useLocation()
-    if(location.pathname === '/login' || location.pathname === '/signup'){
+    if(location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/admin'){
       return null
     }else{
       return <Navbar/>
@@ -34,7 +38,7 @@ function App() {
 
   return (
     <>
-     
+     <WhishlistProvider>
      <CartProvider>
      <BrowserRouter>
      <ConditonNavbar/>
@@ -64,12 +68,20 @@ function App() {
       <Route path='/whishlist' element={<Whislist/>} />
       <Route path='/myorders' element={<Myorders/>} />
       <Route path='/about' element={<About/>} />
+       
+      <Route path='/admin' element={<Adminprotected/>}>
+          <Route path='users' element={<Users/>} />
+          <Route index element={<Dashbaord/>} />
+
+      </Route>
+
 
 
       <Route path='*' element={<Notfound/>}/>
      </Routes>
      </BrowserRouter>
      </CartProvider>
+     </WhishlistProvider>
     </>
   )
 }

@@ -188,7 +188,8 @@
       "age": 20,
       "email": "ravi@gmail.com",
       "mobile": "9876543210",
-      "password": "12345"
+      "password": "12345",
+      "role":"admin"
     },
     {
       "username": "sanu",
@@ -196,8 +197,38 @@
       "email": "sanuvkd104@gmail.com",
       "mobile": "8606569408",
       "password": "123456",
+      "role":"admin",
       "id": 2,
-      "cart": [],
+      "cart": [
+        {
+          "productId": 2,
+          "title": "OnePlus Bullets Wireless Z2 Bluetooth ",
+          "price": 1349,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/2/a/p/-original-imahef3zg3ewyvuq.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 4,
+          "title": "Apple AirPods (3rd generation) Bluetooth  ",
+          "price": 10999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 15,
+          "title": "SONY WI-C100 Bluetooth Neckband",
+          "price": 1499,
+          "image": "https://rukminim2.flixcart.com/image/612/612/l58iaa80/headphone/r/y/u/wi-c100-sony-original-imagfybgaubaxpk2.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 18,
+          "title": "Apple HomePod Smart Speaker",
+          "price": 32900,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/v/i/j/-original-imagm87dsvhg3uxf.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
       "whishlist": [
         {
           "productId": 17,
@@ -246,6 +277,13 @@
           "title": "JBL Flip 6 Bluetooth Speaker",
           "price": 8999,
           "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/d/0/v/-original-imahdxtpeqszray4.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 7,
+          "title": "JBL Tune 770NC Active Noise Cancelling Headphones",
+          "price": 5999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/4/i/h/jblt770ncblk-jbl-original-imahewhwvyzbycr7.jpeg?q=70",
           "quantity": 1
         }
       ]
@@ -458,13 +496,56 @@
       "mobile": "8989982830",
       "password": "123456",
       "id": 10,
-      "cart": [],
+      "cart": [
+        {
+          "productId": 4,
+          "title": "Apple AirPods (3rd generation) Bluetooth  ",
+          "price": 10999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
       "whishlist": [
         {
-          "productId": 6,
-          "title": "JBL Flip 6 Bluetooth Speaker",
-          "price": 8999,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/d/0/v/-original-imahdxtpeqszray4.jpeg?q=70",
+          "productId": 3,
+          "title": "realme Buds 3 wired ",
+          "price": 599,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/g/e/-original-imahbpxeqkyar4yq.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 12,
+          "title": "boAt Rockerz 110 Bluetooth Neckband",
+          "price": 899,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/o/j/o/kerz-110-boat-original-imahenp57dwyavju.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 11,
+          "title": "boAt 100 Wired Earphones",
+          "price": 379,
+          "image": "https://rukminim2.flixcart.com/image/612/612/kqwobrk0/headphone/3/n/b/bassheads-100-boat-original-imag4tgdrpxfh3pk.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "title": "OnePlus Bullets Wireless Z2 Bluetooth ",
+          "price": 1349,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/2/a/p/-original-imahef3zg3ewyvuq.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 1,
+          "title": "boAt Rockerz 480 w/ Beast Mode",
+          "price": 1799,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/t/k/l/-original-imah5h428mq9v8bb.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 7,
+          "title": "JBL Tune 770NC Active Noise Cancelling Headphones",
+          "price": 5999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/4/i/h/jblt770ncblk-jbl-original-imahewhwvyzbycr7.jpeg?q=70",
           "quantity": 1
         }
       ]
@@ -1119,6 +1200,106 @@
         "pincode": "2345678"
       },
       "id": 19
+    },
+    {
+      "username": "salman1",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 10,
+      "items": [
+        {
+          "productId": 2,
+          "title": "OnePlus Bullets Wireless Z2 Bluetooth ",
+          "price": 1349,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/2/a/p/-original-imahef3zg3ewyvuq.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "delivery": {
+        "name": "sanu",
+        "mobile": "24443244",
+        "address": "safdfds",
+        "place": "vkd",
+        "pincode": "679333"
+      },
+      "id": 20
+    },
+    {
+      "username": "salman1",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 10,
+      "items": [
+        {
+          "productId": 3,
+          "title": "realme Buds 3 wired ",
+          "price": 599,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/g/e/-original-imahbpxeqkyar4yq.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 7,
+          "title": "JBL Tune 770NC Active Noise Cancelling Headphones",
+          "price": 5999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/4/i/h/jblt770ncblk-jbl-original-imahewhwvyzbycr7.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 11,
+          "title": "boAt 100 Wired Earphones",
+          "price": 379,
+          "image": "https://rukminim2.flixcart.com/image/612/612/kqwobrk0/headphone/3/n/b/bassheads-100-boat-original-imag4tgdrpxfh3pk.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 12,
+          "title": "boAt Rockerz 110 Bluetooth Neckband",
+          "price": 899,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/o/j/o/kerz-110-boat-original-imahenp57dwyavju.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 10,
+          "title": "SONY WF-LS900N Bluetooth Earbuds",
+          "price": 18990,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/p/i/4/wf-ls900-sony-original-imagjzsse8zyyfgf.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 9,
+          "title": "realme Buds T110 Bluetooth Earbuds",
+          "price": 1299,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/s/n/u/-original-imah3yrgpyqeazhw.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 16,
+          "title": "SONY WH-CH720N Active Noise Cancelling Headphones",
+          "price": 8800,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/y/x/y/-original-imagz2d8fkkf5vme.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 15,
+          "title": "SONY WI-C100 Bluetooth Neckband",
+          "price": 1499,
+          "image": "https://rukminim2.flixcart.com/image/612/612/l58iaa80/headphone/r/y/u/wi-c100-sony-original-imagfybgaubaxpk2.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 14,
+          "title": "realme Buds Wireless 5 Bluetooth Neckband",
+          "price": 1799,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/f/k/h/-original-imahyy62vg5r3wue.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "delivery": {
+        "name": "ygfuygh",
+        "mobile": "24443244",
+        "address": "safdfds",
+        "place": "vkd",
+        "pincode": "2345678"
+      },
+      "id": 21
     }
   ]
 }

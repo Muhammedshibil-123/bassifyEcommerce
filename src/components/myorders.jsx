@@ -17,6 +17,11 @@ function Myorders() {
       .catch((err) => console.log(err))
   }, [userId])
 
+
+   function handleProductClick(productId){
+       navigate(`/${productId}`)
+   }
+   
   return (
     <div className="main-cart-conatainer">
       <div className="cart-container">
@@ -27,7 +32,10 @@ function Myorders() {
           <div>
             {orders.map((order) => (
               order.items.map((product) => (
-                <div className="cartdiv" key={order.id}>
+                <div className="cartdiv" key={order.id}
+                style={{cursor:'pointer'}}
+                onClick={()=>handleProductClick(product.productId)}
+                >
                  
                   <img src={product.image}  />
                   <h3>{product.title}</h3>

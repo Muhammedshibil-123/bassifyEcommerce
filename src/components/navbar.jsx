@@ -5,24 +5,26 @@ import cart from '../assets/cart.png'
 import search from '../assets/serach.png'
 import whishlist from '../assets/whishlist.png'
 import account from '../assets/account.png'
-import { useState ,useContext} from 'react'
+import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {CartContext } from '../component/cartcouter'
+import { CartContext } from '../component/cartcouter'
+import { WishlistContext } from '../component/whislistcouter'
 
 function Navbar() {
     const userId = (localStorage.getItem("username"))
     const [searchnav, setSearchnav] = useState('')
     const navigate = useNavigate()
-    const {cartcount}=useContext(CartContext)
-     
+    const { cartcount } = useContext(CartContext)
+    const { Whishlistcount } = useContext(WishlistContext)
+
     function handleKeyPress(e) {
 
         if (e.key === 'Enter') {
             e.preventDefault();
             localStorage.setItem('search', searchnav)
-          
+
             navigate('/shop');
-              window.location.reload()
+            window.location.reload()
         }
     }
 
@@ -32,7 +34,7 @@ function Navbar() {
         window.location.reload()
     }
 
-    function shopRefresh(){
+    function shopRefresh() {
         localStorage.removeItem('search')
         navigate('/shop');
         window.location.reload()
@@ -71,17 +73,21 @@ function Navbar() {
                     <div className="whishlist">
                         <NavLink to={'/whishlist'} >
                             <img src={whishlist} alt="" />
+
                         </NavLink>
+                        <div className="whislistcouter">
+                            <p className='whishlistcount'>{Whishlistcount}</p>
+                        </div>
                     </div>
                     <div className="cart">
                         <NavLink to={'/cart'} >
-                            
+
                             <img src={cart} alt="" />
                         </NavLink>
                         <div className="cartcouter">
-                        <p className='cartcount'>{cartcount}</p>
+                            <p className='cartcount'>{cartcount}</p>
                         </div>
-                        
+
                     </div>
 
                     {

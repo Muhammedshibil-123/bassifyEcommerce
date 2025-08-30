@@ -6,6 +6,7 @@ import './shop.css'
 import { useNavigate } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { CartContext } from "../component/cartcouter";
+import { WishlistContext } from "../component/whislistcouter";
 
 
 
@@ -19,6 +20,7 @@ function Shop() {
    const [wishlist, setWishlist] = useState([])
 
    const {updateCartCount} = useContext(CartContext)
+    const {updateWhislistCount} = useContext(WishlistContext)
 
   useEffect(() => {
     axios
@@ -195,6 +197,8 @@ function Shop() {
       })
       setWishlist(updatedwihislist)
     }
+
+    updateWhislistCount()
 
   }
 
