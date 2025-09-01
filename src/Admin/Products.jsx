@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Users() {
+function Products() {
   return (
     <div style={{marginLeft:'290px'}}>
-      Users
-
+        Products
+        
     </div>
   )
 }
 
-export default Users
+export default Products

@@ -1,8 +1,11 @@
 import React from 'react'
+import './dashboard.css'
 
 function Dashbaord() {
   return (
-    <div>Dashbaord</div>
+    <div style={{marginLeft:'290px'}}>
+      <div>aff</div>
+    </div>
   )
 }
 

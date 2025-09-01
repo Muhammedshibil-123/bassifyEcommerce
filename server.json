@@ -189,7 +189,7 @@
       "email": "ravi@gmail.com",
       "mobile": "9876543210",
       "password": "12345",
-      "role":"admin"
+      "role": "admin"
     },
     {
       "username": "sanu",
@@ -197,7 +197,7 @@
       "email": "sanuvkd104@gmail.com",
       "mobile": "8606569408",
       "password": "123456",
-      "role":"admin",
+      "role": "admin",
       "id": 2,
       "cart": [
         {
@@ -377,6 +377,15 @@
           "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/r/3/g/-original-imah4d4k5s3wtupu.jpeg?q=70",
           "quantity": 1
         }
+      ],
+      "whishlist": [
+        {
+          "productId": 3,
+          "title": "realme Buds 3 wired ",
+          "price": 599,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/g/e/-original-imahbpxeqkyar4yq.jpeg?q=70",
+          "quantity": 1
+        }
       ]
     },
     {
@@ -549,6 +558,16 @@
           "quantity": 1
         }
       ]
+    },
+    {
+      "username": "arun",
+      "age": "18",
+      "email": "sanuvkd104@gmail.com",
+      "mobile": "8989982830",
+      "password": "123456",
+      "id": 11,
+      "cart": [],
+      "whishlist": []
     }
   ],
   "orders": [
@@ -1300,6 +1319,28 @@
         "pincode": "2345678"
       },
       "id": 21
+    },
+    {
+      "username": "arun",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 11,
+      "items": [
+        {
+          "productId": 7,
+          "title": "JBL Tune 770NC Active Noise Cancelling Headphones",
+          "price": 5999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/4/i/h/jblt770ncblk-jbl-original-imahewhwvyzbycr7.jpeg?q=70",
+          "quantity": 3
+        }
+      ],
+      "delivery": {
+        "name": "sanu",
+        "mobile": "8989982830",
+        "address": "safdfds",
+        "place": "demoo",
+        "pincode": "679333"
+      },
+      "id": 22
     }
   ]
 }
