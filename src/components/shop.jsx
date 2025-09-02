@@ -25,7 +25,12 @@ function Shop() {
   useEffect(() => {
     axios
       .get("http://localhost:3001/products")
-      .then((res) => setProducts(res.data))
+      .then((res) => {
+        let filterdata = res.data.filter((product)=>{
+          return product.status==='active'
+        })
+        setProducts(filterdata)
+      })
       .catch((err) => console.log(err));
 
       if(userId){
@@ -33,6 +38,9 @@ function Shop() {
         .then((res)=>setWishlist(res.data.whishlist || []))
       }
   }, [userId]);
+
+   
+  
 
   async function CartHandleChange(product) {
     if (!userId) {
@@ -86,9 +94,9 @@ function Shop() {
   const searchItem = (localStorage.getItem('search') || "").toLowerCase()
 
   let filterProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(searchItem) ||
-    product.brand.toLowerCase().includes(searchItem) ||
-    product.description.toLowerCase().includes(searchItem)
+    product.title?.toLowerCase().includes(searchItem) ||
+    product.brand?.toLowerCase().includes(searchItem) ||
+    product.description?.toLowerCase().includes(searchItem)
   )
 
   if (sortType === 'low to high') {

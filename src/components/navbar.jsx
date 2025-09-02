@@ -5,10 +5,12 @@ import cart from '../assets/cart.png'
 import search from '../assets/serach.png'
 import whishlist from '../assets/whishlist.png'
 import account from '../assets/account.png'
+import adminimg from '../assets/admin.png'
 import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CartContext } from '../component/cartcouter'
 import { WishlistContext } from '../component/whislistcouter'
+
 
 function Navbar() {
     const userId = (localStorage.getItem("username"))
@@ -16,6 +18,7 @@ function Navbar() {
     const navigate = useNavigate()
     const { cartcount } = useContext(CartContext)
     const { Whishlistcount } = useContext(WishlistContext)
+    const admin= localStorage.getItem('role')
 
     function handleKeyPress(e) {
 
@@ -44,6 +47,11 @@ function Navbar() {
         <div className='main-navbar-container'>
             <div className='navbar-container'>
                 <div className='left-navbar'>
+                    <div className='admincss'>
+                        <NavLink to={'/admin'}>
+                        <img src={adminimg} style={{display:admin === 'admin'?'block':'none'}} alt="" />
+                        </NavLink>
+                    </div>
                     <div className='Bassify'>
                         Bassify</div>
                     <div className='home'>

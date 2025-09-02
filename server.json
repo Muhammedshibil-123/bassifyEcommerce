@@ -7,7 +7,8 @@
       "type": "headphone",
       "connectivity": "wireless",
       "description": "Beast Mode, RGB LEDs(6 Light Modes), 60HRS Playback & ENx Tech Bluetooth  (Black Sabre, On the Ear)",
-      "price": 1799,
+      "price": "1799",
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/t/k/l/-original-imah5h428mq9v8bb.jpeg?q=70"
     },
     {
@@ -18,6 +19,7 @@
       "connectivity": "wireless",
       "description": "Powerful sound with Beast Mode and ENx Noise Cancellation, packed in a stylish neckband design. Enjoy up to 60 hours of nonstop playback with RGB LED effects.",
       "price": 1349,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/2/a/p/-original-imahef3zg3ewyvuq.jpeg?q=70"
     },
     {
@@ -28,6 +30,7 @@
       "connectivity": "wired",
       "description": "Enjoy clear, balanced sound with the realme Buds 3 wired headset, built for comfort and daily use. Comes with an in-line mic and button control for music and calls.",
       "price": 599,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/g/e/-original-imahbpxeqkyar4yq.jpeg?q=70"
     },
     {
@@ -38,6 +41,7 @@
       "connectivity": "wireless",
       "description": "Apple AirPods (3rd Gen) deliver rich, immersive sound with Adaptive EQ and Spatial Audio. Enjoy seamless wireless connectivity, long battery life, and a comfortable fit.",
       "price": 10999,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70"
     },
     {
@@ -48,6 +52,7 @@
       "connectivity": "wireless",
       "description": "JBL Flip Essential 2, Deep Bass, 10Hrs Playtime, IPX7 Waterproof, Portable 20 W Bluetooth Speaker (Black, Mono Channel)",
       "price": 5999,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/mobile-tablet-speaker/p/p/3/jblflipes2-jbl-original-imaghhxczcphv48d.jpeg?q=70"
     },
     {
@@ -58,6 +63,7 @@
       "connectivity": "wireless",
       "description": "The JBL Flip 6 is a portable and waterproof Bluetooth speaker with a 2-way speaker system for clear, powerful sound. It features IP67 water and dustproof rating, up to 12 hours of playtime, and the ability to customize audio via the JBL Portable app. It also has PartyBoost to link with other compatible JBL speakers.",
       "price": 8999,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/d/0/v/-original-imahdxtpeqszray4.jpeg?q=70"
     },
     {
@@ -68,6 +74,7 @@
       "connectivity": "wireless",
       "description": "JBL Tune 770NC Active Noise Cancelling, 70Hr Playtime, Fast Pair & Multi Connect Bluetooth Gaming (Black, On the Ear)",
       "price": 5999,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/4/i/h/jblt770ncblk-jbl-original-imahewhwvyzbycr7.jpeg?q=70"
     },
     {
@@ -78,6 +85,7 @@
       "connectivity": "wireless",
       "description": "OnePlus Nord Buds 3 with up to 32dB ANC Bluetooth Headset (Harmonic Gray, True Wireless). Features 12.4mm dynamic drivers, BassWave 2.0, up to 43 hours of playback, and an IP55 rating for water and dust resistance.",
       "price": 2299,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/r/3/g/-original-imah4d4k5s3wtupu.jpeg?q=70"
     },
     {
@@ -88,6 +96,7 @@
       "connectivity": "wireless",
       "description": "realme Buds T110 with AI ENC for calls, 38 hours of Playback and Deep Bass. True Wireless.",
       "price": 1299,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/s/n/u/-original-imah3yrgpyqeazhw.jpeg?q=70"
     },
     {
@@ -98,6 +107,7 @@
       "connectivity": "wireless",
       "description": "SONY WF-LS900N with up to 20 hours battery life, Noise Cancellation, and True Wireless Bluetooth functionality.",
       "price": 18990,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/p/i/4/wf-ls900-sony-original-imagjzsse8zyyfgf.jpeg?q=70"
     },
     {
@@ -108,6 +118,7 @@
       "connectivity": "wired",
       "description": "boAt 100 Wired In-Ear Headset with a microphone and 3.5mm jack connector, providing a comfortable fit for calls and music.",
       "price": 379,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/kqwobrk0/headphone/3/n/b/bassheads-100-boat-original-imag4tgdrpxfh3pk.jpeg?q=70"
     },
     {
@@ -118,6 +129,7 @@
       "connectivity": "wireless",
       "description": "boAt Rockerz 110 with 40 HRS Playback, ENx Technology, Beast Mode & ASAP Charge Bluetooth.",
       "price": 899,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/o/j/o/kerz-110-boat-original-imahenp57dwyavju.jpeg?q=70"
     },
     {
@@ -128,6 +140,7 @@
       "connectivity": "wired",
       "description": "Apple EarPods (USB-C) Wired In-Ear Headset with a microphone and in-line controls for calls and music. Features a comfortable fit.",
       "price": 1649,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/a/7/a/wired-headphones-crystal-clear-sound-earphones-for-oneplus-oppo-original-imagtmzfuqf8fe8a.jpeg?q=70"
     },
     {
@@ -138,6 +151,7 @@
       "connectivity": "wireless",
       "description": "realme Buds Wireless 5 with 50db ANC, 360 degree Spatial Audio, IP55 water resistance, and 38 hours of playback.",
       "price": 1799,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/f/k/h/-original-imahyy62vg5r3wue.jpeg?q=70"
     },
     {
@@ -148,6 +162,7 @@
       "connectivity": "wireless",
       "description": "SONY WI-C100 with 25 hours battery life, DSEE technology for high-quality sound, and a flexible neckband design. It is also splash-proof with an IPX4 rating.",
       "price": 1499,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/l58iaa80/headphone/r/y/u/wi-c100-sony-original-imagfybgaubaxpk2.jpeg?q=70"
     },
     {
@@ -158,6 +173,7 @@
       "connectivity": "wireless",
       "description": "SONY WH-CH720N with Active Noise Cancelling, up to 50 hours battery life, and Multipoint connection for seamless pairing across devices. Features an 'On the Ear' design.",
       "price": 8800,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/y/x/y/-original-imagz2d8fkkf5vme.jpeg?q=70"
     },
     {
@@ -168,6 +184,7 @@
       "connectivity": "wireless",
       "description": "boAt Stone 350 10 W Bluetooth Speaker with a 12-hour battery life and an IPX7 water resistance rating.",
       "price": 1799,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/m/k/f/-original-imahez5ggh4a2sh4.jpeg?q=70"
     },
     {
@@ -178,7 +195,30 @@
       "connectivity": "wireless",
       "description": "Apple HomePod with Siri Assistant, offering wireless music streaming via Bluetooth and a mono configuration for high-fidelity audio.",
       "price": 32900,
+      "status": "active",
       "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/v/i/j/-original-imagm87dsvhg3uxf.jpeg?q=70"
+    },
+    {
+      "title": "realme buds 5  changed",
+      "brand": "realme changed ",
+      "type": "neckband changed ",
+      "description": "lorem changed",
+      "price": "8888",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/t/k/l/-original-imah5h428mq9v8bb.jpeg?q=70",
+      "connectivity": "wirelss changed",
+      "status": "active",
+      "id": 19
+    },
+    {
+      "title": "realme",
+      "brand": "realme",
+      "type": "neckband",
+      "description": "Beast Mode, RGB LEDs(6 Light Modes), 60HRS Playback & ENx Tech Bluetooth  (Black Sabre, On the Ear)",
+      "price": "4444",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/t/k/l/-original-imah5h428mq9v8bb.jpeg?q=70",
+      "connectivity": "wireless",
+      "status": "inactive",
+      "id": 20
     }
   ],
   "users": [
@@ -189,7 +229,8 @@
       "email": "ravi@gmail.com",
       "mobile": "9876543210",
       "password": "12345",
-      "role": "admin"
+      "role": "admin",
+      "status": "active"
     },
     {
       "username": "sanu",
@@ -198,34 +239,14 @@
       "mobile": "8606569408",
       "password": "123456",
       "role": "admin",
+      "status": "active",
       "id": 2,
       "cart": [
         {
-          "productId": 2,
-          "title": "OnePlus Bullets Wireless Z2 Bluetooth ",
-          "price": 1349,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/2/a/p/-original-imahef3zg3ewyvuq.jpeg?q=70",
-          "quantity": 1
-        },
-        {
-          "productId": 4,
-          "title": "Apple AirPods (3rd generation) Bluetooth  ",
-          "price": 10999,
-          "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
-          "quantity": 1
-        },
-        {
-          "productId": 15,
-          "title": "SONY WI-C100 Bluetooth Neckband",
-          "price": 1499,
-          "image": "https://rukminim2.flixcart.com/image/612/612/l58iaa80/headphone/r/y/u/wi-c100-sony-original-imagfybgaubaxpk2.jpeg?q=70",
-          "quantity": 1
-        },
-        {
-          "productId": 18,
-          "title": "Apple HomePod Smart Speaker",
-          "price": 32900,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/v/i/j/-original-imagm87dsvhg3uxf.jpeg?q=70",
+          "productId": 19,
+          "title": "realme buds 5  changed",
+          "price": "8888",
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/t/k/l/-original-imah5h428mq9v8bb.jpeg?q=70",
           "quantity": 1
         }
       ],
@@ -285,6 +306,20 @@
           "price": 5999,
           "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/4/i/h/jblt770ncblk-jbl-original-imahewhwvyzbycr7.jpeg?q=70",
           "quantity": 1
+        },
+        {
+          "productId": 14,
+          "title": "realme Buds Wireless 5 Bluetooth Neckband",
+          "price": 1799,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/f/k/h/-original-imahyy62vg5r3wue.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 19,
+          "title": "realme buds 5  changed",
+          "price": "8888",
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/t/k/l/-original-imah5h428mq9v8bb.jpeg?q=70",
+          "quantity": 1
         }
       ]
     },
@@ -295,6 +330,7 @@
       "mobile": "1234567899",
       "password": "123456",
       "id": 3,
+      "status": "inactive",
       "cart": [],
       "whishlist": [
         {
@@ -354,30 +390,9 @@
       "email": "sanuvkd104@gmail.com",
       "mobile": "8989982830",
       "password": "123456",
+      "status": "active",
       "id": 4,
-      "cart": [
-        {
-          "productId": 3,
-          "title": "realme Buds 3 wired ",
-          "price": 599,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/g/e/-original-imahbpxeqkyar4yq.jpeg?q=70",
-          "quantity": 1
-        },
-        {
-          "productId": 7,
-          "title": "JBL Tune 770NC Active Noise Cancelling Headphones",
-          "price": 5999,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/4/i/h/jblt770ncblk-jbl-original-imahewhwvyzbycr7.jpeg?q=70",
-          "quantity": 1
-        },
-        {
-          "productId": 8,
-          "title": "OnePlus Nord Buds 3 Bluetooth Earbuds",
-          "price": 2299,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/r/3/g/-original-imah4d4k5s3wtupu.jpeg?q=70",
-          "quantity": 1
-        }
-      ],
+      "cart": [],
       "whishlist": [
         {
           "productId": 3,
@@ -394,6 +409,7 @@
       "email": "adhilv@gmail.com",
       "mobile": "9876543210",
       "password": "123456",
+      "status": "active",
       "id": 5,
       "cart": []
     },
@@ -403,6 +419,7 @@
       "email": "sanuvkd104@gmail.com",
       "mobile": "8989982830",
       "password": "123456",
+      "status": "active",
       "id": 6
     },
     {
@@ -411,6 +428,7 @@
       "email": "sanuvkd104@gmail.com",
       "mobile": "8989982830",
       "password": "123456",
+      "status": "active",
       "id": 7,
       "cart": [
         {
@@ -478,6 +496,7 @@
       "email": "demo@gmail.com",
       "mobile": "0000000000",
       "password": "123123",
+      "status": "active",
       "id": 8,
       "cart": [],
       "whishlist": [
@@ -496,6 +515,7 @@
       "email": "sanuvkd104@gmail.com",
       "mobile": "8989982830",
       "password": "123456",
+      "status": "active",
       "id": 9
     },
     {
@@ -504,6 +524,7 @@
       "email": "sanuvkd104@gmail.com",
       "mobile": "8989982830",
       "password": "123456",
+      "status": "active",
       "id": 10,
       "cart": [
         {
@@ -565,6 +586,7 @@
       "email": "sanuvkd104@gmail.com",
       "mobile": "8989982830",
       "password": "123456",
+      "status": "active",
       "id": 11,
       "cart": [],
       "whishlist": []
@@ -1341,6 +1363,144 @@
         "pincode": "679333"
       },
       "id": 22
+    },
+    {
+      "username": "sanu",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 2,
+      "items": [
+        {
+          "productId": 2,
+          "title": "OnePlus Bullets Wireless Z2 Bluetooth ",
+          "price": 1349,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/2/a/p/-original-imahef3zg3ewyvuq.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 4,
+          "title": "Apple AirPods (3rd generation) Bluetooth  ",
+          "price": 10999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 15,
+          "title": "SONY WI-C100 Bluetooth Neckband",
+          "price": 1499,
+          "image": "https://rukminim2.flixcart.com/image/612/612/l58iaa80/headphone/r/y/u/wi-c100-sony-original-imagfybgaubaxpk2.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 18,
+          "title": "Apple HomePod Smart Speaker",
+          "price": 32900,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/v/i/j/-original-imagm87dsvhg3uxf.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "delivery": {
+        "name": "salama",
+        "mobile": "8989982830",
+        "address": "dfasf",
+        "place": "demoo",
+        "pincode": "679333"
+      },
+      "id": 23
+    },
+    {
+      "username": "sanu",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 2,
+      "items": [
+        {
+          "productId": 3,
+          "title": "realme Buds 3 wired ",
+          "price": 599,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/g/e/-original-imahbpxeqkyar4yq.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "title": "OnePlus Bullets Wireless Z2 Bluetooth ",
+          "price": 1349,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/2/a/p/-original-imahef3zg3ewyvuq.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "delivery": {
+        "name": "sanu",
+        "mobile": "8989982830",
+        "address": "edathil",
+        "place": "vkd",
+        "pincode": "1321321"
+      },
+      "id": 24
+    },
+    {
+      "username": "sanu",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 2,
+      "items": [
+        {
+          "productId": 4,
+          "title": "Apple AirPods (3rd generation) Bluetooth  ",
+          "price": 10999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "delivery": {
+        "name": "sanu",
+        "mobile": "8989982830",
+        "address": "dfasf",
+        "place": "vkd",
+        "pincode": "1321321"
+      },
+      "id": 25
+    },
+    {
+      "username": "yahya",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 4,
+      "items": [
+        {
+          "productId": 3,
+          "title": "realme Buds 3 wired ",
+          "price": 599,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/g/e/-original-imahbpxeqkyar4yq.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "delivery": {
+        "name": "sanu",
+        "mobile": "8989982830",
+        "address": "safdfds",
+        "place": "vkd",
+        "pincode": "2345678"
+      },
+      "id": 26
+    },
+    {
+      "username": "yahya",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 4,
+      "items": [
+        {
+          "productId": 3,
+          "title": "realme Buds 3 wired ",
+          "price": 599,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/g/e/-original-imahbpxeqkyar4yq.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "delivery": {
+        "name": "ygfuygh",
+        "mobile": "24443244",
+        "address": "safdfds",
+        "place": "vkd",
+        "pincode": "2345678"
+      },
+      "id": 27
     }
   ]
 }

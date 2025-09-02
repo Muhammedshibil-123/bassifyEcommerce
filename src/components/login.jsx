@@ -51,21 +51,24 @@ function Login() {
       })
 
       if(userdata){
-        localStorage.setItem('username',userdata.username)
+
+        if(userdata.status === 'inactive'){
+          setError('This User Blocked')
+        }else{
+          localStorage.setItem('username',userdata.username)
         localStorage.setItem('age',userdata.age)
         localStorage.setItem('email',userdata.email)
         localStorage.setItem('mobile',userdata.mobile)
         localStorage.setItem('id',userdata.id)
         localStorage.setItem('role',userdata.role)
 
-        const roles=localStorage.getItem('role')
-        if(roles==='admin'){
-          navigate('/admin')
-        }else{
+        
             navigate('/',{replace:true})
           window.location.reload()
         }
+
         
+       
       }else{
         setError('User not found')
       }

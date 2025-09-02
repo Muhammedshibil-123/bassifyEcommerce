@@ -24,7 +24,7 @@ function Profile() {
         <p className="email">Email: {email}</p>
         <p className="mobile">Mobile: {mobile}</p>
         
-             <button onClick={logouthandlechange}><span>Logout</span></button>
+        <button onClick={logouthandlechange}><span>Logout</span></button>
        
        
     </div>
