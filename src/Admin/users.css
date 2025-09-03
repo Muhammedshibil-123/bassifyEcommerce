@@ -119,9 +119,9 @@
 
 
 .main-users-container .serach input {
-  padding: 10px 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  padding: 10px 1px;
+  border: 2px solid #ddd;
+  border-radius: 14px;
   outline: none;
   font-size: 14px;
   width: 250px;
@@ -129,8 +129,13 @@
 }
 
 .main-users-container .serach input:focus {
-  border-color: #ff4c4c;
-  box-shadow: 0 0 6px rgba(255, 76, 76, 0.4);
+  border-color: #1a73e8;
+  box-shadow: 0 0 2px black;
 }
 
+.serach-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
 

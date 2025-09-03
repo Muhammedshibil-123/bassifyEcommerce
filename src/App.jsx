@@ -25,6 +25,7 @@ import Users from './Admin/users'
 import Sidebar from './Admin/sidebar'
 import Orders from './Admin/orders'
 import Products from './Admin/Products'
+import { SearchProvider } from './component/searchcontext'
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <>
+      <SearchProvider>
       <WhishlistProvider>
         <CartProvider>
           <BrowserRouter>
@@ -89,6 +91,7 @@ function App() {
           </BrowserRouter>
         </CartProvider>
       </WhishlistProvider>
+      </SearchProvider>
     </>
   )
 }

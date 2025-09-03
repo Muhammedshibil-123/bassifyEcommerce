@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { CartContext } from "../component/cartcouter";
 import { WishlistContext } from "../component/whislistcouter";
-
+import { SearchContext } from "../component/searchcontext";
 
 
 function Shop() {
@@ -17,37 +17,38 @@ function Shop() {
   const [typesort, setTypesort] = useState('types')
   const [brandsort, setBrandsort] = useState('brand')
   const navigate = useNavigate()
-   const [wishlist, setWishlist] = useState([])
-
-   const {updateCartCount} = useContext(CartContext)
-    const {updateWhislistCount} = useContext(WishlistContext)
+  const [wishlist, setWishlist] = useState([])
+  const { searchTerm } = useContext(SearchContext)
+  const { updateCartCount } = useContext(CartContext)
+  const { updateWhislistCount } = useContext(WishlistContext)
 
   useEffect(() => {
     axios
       .get("http://localhost:3001/products")
       .then((res) => {
-        let filterdata = res.data.filter((product)=>{
-          return product.status==='active'
+        let filterdata = res.data.filter((product) => {
+          return product.status === 'active'
         })
         setProducts(filterdata)
       })
       .catch((err) => console.log(err));
 
-      if(userId){
-        axios.get(`http://localhost:3001/users/${userId}`)
-        .then((res)=>setWishlist(res.data.whishlist || []))
-      }
+    if (userId) {
+      axios.get(`http://localhost:3001/users/${userId}`)
+        .then((res) => setWishlist(res.data.whishlist || []))
+    }
   }, [userId]);
 
-   
-  
+
+
 
   async function CartHandleChange(product) {
     if (!userId) {
-      toast.error("Please log in to add to cart ", 
-        { positon: 'top-center' ,
+      toast.error("Please log in to add to cart ",
+        {
+          positon: 'top-center',
           autoClose: 1300,
-        style: { marginTop: '60px' }
+          style: { marginTop: '60px' }
         })
       return
     }
@@ -91,12 +92,11 @@ function Shop() {
 
   }
 
-  const searchItem = (localStorage.getItem('search') || "").toLowerCase()
 
   let filterProducts = products.filter((product) =>
-    product.title?.toLowerCase().includes(searchItem) ||
-    product.brand?.toLowerCase().includes(searchItem) ||
-    product.description?.toLowerCase().includes(searchItem)
+    product.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    product.brand?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    product.description?.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
   if (sortType === 'low to high') {
@@ -159,12 +159,13 @@ function Shop() {
   //    navigate(`/${filterProducts.id}`)
   //  }
 
-   async function WhishlistHandleChange(product){
-     if (!userId) {
-      toast.error("Please log in to add to Whislist ", 
-        { positon: 'top-center' ,
+  async function WhishlistHandleChange(product) {
+    if (!userId) {
+      toast.error("Please log in to add to Whislist ",
+        {
+          positon: 'top-center',
           autoClose: 1300,
-        style: { marginTop: '60px' }
+          style: { marginTop: '60px' }
         })
       return
     }
@@ -211,67 +212,67 @@ function Shop() {
   }
 
 
-   
-   function whishlistcolor(productId){
-      return wishlist.find((item)=>item.productId===productId)
-   }
-  
-    return (
-      <>
-        <div className="filters-container">
-          <select name="" id="" value={sortType} onChange={(e) => setSortType(e.target.value)}>
-            <option value="default">Default</option>
-            <option value="low to high">Low to high</option>
-            <option value="high to low">High to low </option>
-          </select>
-          <select name="" id="" value={typesort} onChange={(e) => setTypesort(e.target.value)}>
-            <option value="types">Product Type</option>
-            <option value="headphone">Headphone</option>
-            <option value="headset">Headset</option>
-            <option value="earbuds">Earbuds</option>
-            <option value="neckband">Neckband</option>
-            <option value="speaker">Speaker</option>
-          </select>
-          <select name="" id="" value={brandsort} onChange={(e) => setBrandsort(e.target.value)} >
-            <option value="brand">Brand</option>
-            <option value="boat">boAt</option>
-            <option value="oneplus">OnePlus</option>
-            <option value="realme">Realme</option>
-            <option value="apple">Apple</option>
-            <option value="sony">Sony</option>
-            <option value="jbl">JBL</option>
-          </select>
-        </div>
 
-        <div className="main-shop-container">
-          {filterProducts.map((product, index) => (
-            <div className="shop-container" key={index}>
-            
-              <div className="whislist-contaniner"
-               onClick={() => WhishlistHandleChange(product)}>
-              <FaHeart  style={{
-                color:whishlistcolor(product.id)?'red':'gray',
-                width:'20px',
-                height:'20px'
-                }} />
-              </div>
-              <NavLink to={`/${product.id}`} style={{textDecoration:'none'}}> 
-              <div >
-              <img src={product.image} alt="" />
-              <h3>{product.title}</h3>
-              <h4>{product.brand}</h4>
-              <p className="description"> {product.description}</p>
-              <p className="price">₹{product.price}</p>
-              </div>
-              </NavLink>
-              <button className="addtocart" onClick={() => CartHandleChange(product)}>Add to Cart</button>
-
-
-            </div>
-          ))}
-        </div>
-      </>
-    );
+  function whishlistcolor(productId) {
+    return wishlist.find((item) => item.productId === productId)
   }
 
-  export default Shop;
+  return (
+    <>
+      <div className="filters-container">
+        <select name="" id="" value={sortType} onChange={(e) => setSortType(e.target.value)}>
+          <option value="default">Default</option>
+          <option value="low to high">Low to high</option>
+          <option value="high to low">High to low </option>
+        </select>
+        <select name="" id="" value={typesort} onChange={(e) => setTypesort(e.target.value)}>
+          <option value="types">Product Type</option>
+          <option value="headphone">Headphone</option>
+          <option value="headset">Headset</option>
+          <option value="earbuds">Earbuds</option>
+          <option value="neckband">Neckband</option>
+          <option value="speaker">Speaker</option>
+        </select>
+        <select name="" id="" value={brandsort} onChange={(e) => setBrandsort(e.target.value)} >
+          <option value="brand">Brand</option>
+          <option value="boat">boAt</option>
+          <option value="oneplus">OnePlus</option>
+          <option value="realme">Realme</option>
+          <option value="apple">Apple</option>
+          <option value="sony">Sony</option>
+          <option value="jbl">JBL</option>
+        </select>
+      </div>
+
+      <div className="main-shop-container">
+        {filterProducts.map((product, index) => (
+          <div className="shop-container" key={index}>
+
+            <div className="whislist-contaniner"
+              onClick={() => WhishlistHandleChange(product)}>
+              <FaHeart style={{
+                color: whishlistcolor(product.id) ? 'red' : 'gray',
+                width: '20px',
+                height: '20px'
+              }} />
+            </div>
+            <NavLink to={`/${product.id}`} style={{ textDecoration: 'none' }}>
+              <div >
+                <img src={product.image} alt="" />
+                <h3>{product.title}</h3>
+                <h4>{product.brand}</h4>
+                <p className="description"> {product.description}</p>
+                <p className="price">₹{product.price}</p>
+              </div>
+            </NavLink>
+            <button className="addtocart" onClick={() => CartHandleChange(product)}>Add to Cart</button>
+
+
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
+export default Shop;

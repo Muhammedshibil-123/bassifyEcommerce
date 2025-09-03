@@ -9,6 +9,8 @@ function Products() {
   const [popAdd, setpopAdd] = useState(false)
   const [popEdit, setpopEdit] = useState(false)
   const [currentProduct, setCurrentProduct] = useState(null)
+  const [search, setSearch] = useState('')
+  const [typesort, setTypesort] = useState('types')
   const [newProduct, setNewProducts] = useState({
     title: '',
     brand: '',
@@ -100,13 +102,49 @@ function Products() {
   }
 
   function removeproduct(id) {
-   axios.delete(`http://localhost:3001/products/${id}`)
-   .then((res)=>{
-    const updatedProducts= products.filter((product)=>product.id !==id)
-    setProducts(updatedProducts)
-   })
-   .catch((err)=>console.error(err))
-      
+    axios.delete(`http://localhost:3001/products/${id}`)
+      .then((res) => {
+        const updatedProducts = products.filter((product) => product.id !== id)
+        setProducts(updatedProducts)
+      })
+      .catch((err) => console.error(err))
+
+  }
+
+  function handleSearch(e) {
+    setSearch(e.target.value)
+
+  }
+
+  let filterProducts = products.filter((product) => (
+    product.title?.toLowerCase().includes(search.toLowerCase()) ||
+    product.brand?.toLowerCase().includes(search.toLowerCase()) ||
+    product.status?.toLowerCase().includes(search.toLowerCase()) ||
+    product.id?.toString().toLowerCase().includes(search.toLowerCase())) ||
+    product.description?.toLowerCase().includes(search.toLowerCase())
+
+  )
+
+  if (typesort === 'headphone') {
+    filterProducts = filterProducts.filter((product) =>
+      product.type.toLowerCase().includes('headphone')
+    )
+  } else if (typesort === 'headset') {
+    filterProducts = filterProducts.filter((product) =>
+      product.type.toLowerCase().includes('headset')
+    )
+  } else if (typesort === 'earbuds') {
+    filterProducts = filterProducts.filter((product) =>
+      product.type.toLowerCase().includes('earbuds')
+    )
+  } else if (typesort === 'neckband') {
+    filterProducts = filterProducts.filter((product) =>
+      product.type.toLowerCase().includes('neckband')
+    )
+  } else if (typesort === 'speaker') {
+    filterProducts = filterProducts.filter((product) =>
+      product.type.toLowerCase().includes('speaker')
+    )
   }
 
   return (
@@ -114,10 +152,25 @@ function Products() {
       <div className='main-products-container'>
         <div className="first-part">
           <h1>Products</h1>
-          <div className="serach">
-            <input type="text" />
+          <div className="mainsearch">
+            <div className="serach">
+              <input type="text"
+                onChange={handleSearch}
+                placeholder='  search product...'
+                value={search}
+              />
+            </div>
+            <div className="filters">
+              <select name="" id="" value={typesort} onChange={(e) => setTypesort(e.target.value)}>
+                <option value="types">Product Type</option>
+                <option value="headphone">Headphone</option>
+                <option value="headset">Headset</option>
+                <option value="earbuds">Earbuds</option>
+                <option value="neckband">Neckband</option>
+                <option value="speaker">Speaker</option>
+              </select>
+            </div>
           </div>
-
           <div className="add-product">
             <button onClick={() => setpopAdd(true)}>Add Product</button>
           </div>
@@ -136,7 +189,7 @@ function Products() {
         </div>
 
         <div className="products-container">
-          {products.map((product, index) => (
+          {filterProducts.map((product, index) => (
             <div className="product-row" key={index}>
               <p className='Id'>{product.id}</p>
 

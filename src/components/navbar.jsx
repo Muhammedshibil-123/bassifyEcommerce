@@ -10,7 +10,7 @@ import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CartContext } from '../component/cartcouter'
 import { WishlistContext } from '../component/whislistcouter'
-
+import { SearchContext } from '../component/searchcontext'
 
 function Navbar() {
     const userId = (localStorage.getItem("username"))
@@ -18,27 +18,26 @@ function Navbar() {
     const navigate = useNavigate()
     const { cartcount } = useContext(CartContext)
     const { Whishlistcount } = useContext(WishlistContext)
-    const admin= localStorage.getItem('role')
+    const { setSearchTerm } = useContext(SearchContext)
+    const admin = localStorage.getItem('role')
 
     function handleKeyPress(e) {
 
         if (e.key === 'Enter') {
             e.preventDefault();
-            localStorage.setItem('search', searchnav)
-
-            navigate('/shop');
-            window.location.reload()
+            setSearchTerm(searchnav);
+            navigate('/shop')
         }
     }
 
     function handleImgeClick() {
-        localStorage.setItem('search', searchnav)
-        navigate('/shop');
-        window.location.reload()
+      setSearchTerm('')
+        navigate('/shop')
+
     }
 
     function shopRefresh() {
-        localStorage.removeItem('search')
+        setSearchTerm('');
         navigate('/shop');
         window.location.reload()
     }
@@ -49,7 +48,7 @@ function Navbar() {
                 <div className='left-navbar'>
                     <div className='admincss'>
                         <NavLink to={'/admin'}>
-                        <img src={adminimg} style={{display:admin === 'admin'?'block':'none'}} alt="" />
+                            <img src={adminimg} style={{ display: admin === 'admin' ? 'block' : 'none' }} alt="" />
                         </NavLink>
                     </div>
                     <div className='Bassify'>

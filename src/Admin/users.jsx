@@ -4,14 +4,16 @@ import './users.css'
 
 
 function Users() {
-  const [users,setUsers]=useState([])
- const userId = localStorage.getItem('id')
+  const [users, setUsers] = useState([])
+  const [search, setSearch] = useState('')
+  const [typesort, setTypesort] = useState('types')
+  const userId = localStorage.getItem('id')
 
-  useEffect(()=>{
+  useEffect(() => {
     axios.get("http://localhost:3001/users")
-    .then((res)=>setUsers(res.data))
-    .catch((err)=>console.error(err))
-  },[userId])
+      .then((res) => setUsers(res.data))
+      .catch((err) => console.error(err))
+  }, [userId])
 
   function toggleusersStatus(id) {
     const user = users.find((p) => p.id === id)
@@ -30,13 +32,49 @@ function Users() {
       })
   }
 
+  function handleSearch(e) {
+    setSearch(e.target.value)
+
+  }
+
+  let filterProducts = users.filter((user) => (
+    user.username?.toLowerCase().includes(search.toLowerCase()) ||
+    user.email?.toLowerCase().includes(search.toLowerCase()) ||
+    user.id?.toString().toLowerCase().includes(search.toLowerCase())) ||
+    user.status?.toLowerCase().includes(search.toLowerCase())
+  )
+
+
+  if (typesort === 'active') {
+    filterProducts = filterProducts.filter((product) =>
+      product.status.toLowerCase() === ('active')
+    )
+  } else if (typesort === 'inactive') {
+    filterProducts = filterProducts.filter((product) =>
+      product.status.toLowerCase() === ('inactive')
+    )
+  }
+
   return (
     <div style={{ marginLeft: '290px' }}>
       <div className='main-users-container'>
         <div className="first-part">
           <h1>Users</h1>
-          <div className="serach">
-            <input type="text" />
+          <div className="serach-container">
+            <div className="serach">
+              <input type="text"
+                onChange={handleSearch}
+                placeholder=' search user...'
+                value={search}
+              />
+            </div>
+            <div className="filters">
+                <select name="" id="" value={typesort} onChange={(e) => setTypesort(e.target.value)}>
+                  <option value="types">Default</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
           </div>
         </div>
         <div className="tableheadline">
@@ -44,12 +82,12 @@ function Users() {
           <h4 className='tableTitle'>Username</h4>
           <h4 className='tableBrand'>Email</h4>
           <h4 className='tablemobile'>Mobile</h4>
-           <h4 className='tablestatus'>Status</h4>
+          <h4 className='tablestatus'>Status</h4>
           <h4 className='tableblock'>Block/Unblock</h4>
         </div>
 
         <div className="products-container">
-          {users.map((users, index) => (
+          {filterProducts.map((users, index) => (
             <div className="product-row" key={index}>
               <p className='Id'>{users.id}</p>
 
@@ -72,9 +110,9 @@ function Users() {
             </div>
           ))}
         </div>
-   </div>
+      </div>
 
- </div>
+    </div>
   )
 }
 
