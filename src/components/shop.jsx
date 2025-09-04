@@ -8,7 +8,7 @@ import { FaHeart } from "react-icons/fa";
 import { CartContext } from "../component/cartcouter";
 import { WishlistContext } from "../component/whislistcouter";
 import { SearchContext } from "../component/searchcontext";
-
+import ReactPaginate from "react-paginate";
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -21,6 +21,8 @@ function Shop() {
   const { searchTerm } = useContext(SearchContext)
   const { updateCartCount } = useContext(CartContext)
   const { updateWhislistCount } = useContext(WishlistContext)
+  const [currentPage,setCurrentPage]=useState(0)
+  const productsPerPage = 16
 
   useEffect(() => {
     axios
@@ -217,6 +219,16 @@ function Shop() {
     return wishlist.find((item) => item.productId === productId)
   }
 
+const offset = currentPage * productsPerPage;
+const pageCount = Math.ceil(filterProducts.length / productsPerPage);
+const currentProducts = filterProducts.slice(offset, offset + productsPerPage);
+
+
+  const handlePageClick = ({ selected }) => {
+    setCurrentPage(selected);
+  };
+  
+
   return (
     <>
       <div className="filters-container">
@@ -245,7 +257,7 @@ function Shop() {
       </div>
 
       <div className="main-shop-container">
-        {filterProducts.map((product, index) => (
+        {currentProducts.map((product, index) => (
           <div className="shop-container" key={index}>
 
             <div className="whislist-contaniner"
@@ -271,6 +283,15 @@ function Shop() {
           </div>
         ))}
       </div>
+
+      <ReactPaginate
+      previousLabel={"Previous"}
+      nextLabel={'Next'}
+      pageCount={pageCount}
+      onPageChange={handlePageClick}
+      containerClassName={'pagination'}
+      activeClassName={'active'}
+      />
     </>
   );
 }

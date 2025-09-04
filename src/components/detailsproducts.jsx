@@ -8,11 +8,14 @@ import Notfound from './notfound'
 import { CartContext } from "../component/cartcouter";
 
 
+
+
 function Detailsproducts() {
     const { id } = useParams()
     const [product, setProduct] = useState()
     const userId = (localStorage.getItem("id"))
-    const {updateCartCount} = useContext(CartContext)
+    const {updateCartCount ,CartHandleChange} = useContext(CartContext)
+   
 
     useEffect(() => {
         axios.get(`http://localhost:3001/products/${id}`)
@@ -22,51 +25,51 @@ function Detailsproducts() {
 
 
 
-    async function CartHandleChange(product) {
-    if (!userId) {
-      toast.error("Please log in to add to cart ", { positon: 'top-center' })
-      return
-    }
+  //   async function CartHandleChange(product) {
+  //   if (!userId) {
+  //     toast.error("Please log in to add to cart ", { positon: 'top-center' })
+  //     return
+  //   }
 
-    const userRespone = await axios.get(`http://localhost:3001/users/${userId}`)
-    const userData = userRespone.data
-    const currenCart = userData.cart || []
+  //   const userRespone = await axios.get(`http://localhost:3001/users/${userId}`)
+  //   const userData = userRespone.data
+  //   const currenCart = userData.cart || []
 
-    const existingItem = currenCart.findIndex((item) => item.productId === product.id)
-    let updatedCart;
+  //   const existingItem = currenCart.findIndex((item) => item.productId === product.id)
+  //   let updatedCart;
 
-    if (existingItem !== -1) {
-      toast.warn('Product already in cart', {
-        positon: 'top-center',
-        autoClose: 1300,
-        style: { marginTop: '60px' }
-      })
-    } else {
-      updatedCart = [
-        ...currenCart,
-        {
-          productId: product.id,
-          title: product.title,
-          price: product.price,
-          image: product.image,
-          quantity: 1,
-        },
-      ]
-      toast.success('Item added to Cart', {
-        positon: 'top-center',
-        autoClose: 1300,
-        style: { marginTop: '60px' }
-      })
+  //   if (existingItem !== -1) {
+  //     toast.warn('Product already in cart', {
+  //       positon: 'top-center',
+  //       autoClose: 1300,
+  //       style: { marginTop: '60px' }
+  //     })
+  //   } else {
+  //     updatedCart = [
+  //       ...currenCart,
+  //       {
+  //         productId: product.id,
+  //         title: product.title,
+  //         price: product.price,
+  //         image: product.image,
+  //         quantity: 1,
+  //       },
+  //     ]
+  //     toast.success('Item added to Cart', {
+  //       positon: 'top-center',
+  //       autoClose: 1300,
+  //       style: { marginTop: '60px' }
+  //     })
 
-      await axios.put(`http://localhost:3001/users/${userId}`, {
-        ...userData,
-        cart: updatedCart,
-      })
+  //     await axios.put(`http://localhost:3001/users/${userId}`, {
+  //       ...userData,
+  //       cart: updatedCart,
+  //     })
 
-      updateCartCount()
-    }
+  //     updateCartCount()
+  //   }
 
-  }
+  // }
 
   if(!product){
     return <Notfound/>

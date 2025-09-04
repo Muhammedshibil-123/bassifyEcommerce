@@ -150,3 +150,11 @@
   background: #1e7e34;
 }
 
+@media (max-width: 768px){
+  .cartdiv{
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
