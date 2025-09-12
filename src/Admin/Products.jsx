@@ -24,7 +24,7 @@ function Products() {
   const userId = localStorage.getItem('id')
 
   useEffect(() => {
-    axios.get("http://localhost:3001/products")
+    axios.get(`${import.meta.env.VITE_API_URL}/products`)
       .then((res) => {
         setProducts(res.data)
       })
@@ -43,7 +43,7 @@ function Products() {
     )
 
     axios
-      .patch(`http://localhost:3001/products/${id}`, { status: newStatus })
+      .patch(`${import.meta.env.VITE_API_URL}/products/${id}`, { status: newStatus })
       .catch((err) => {
         console.error(err)
       })
@@ -58,7 +58,7 @@ function Products() {
 
   function submit(e) {
     e.preventDefault()
-    axios.post("http://localhost:3001/products", newProduct)
+    axios.post(`${import.meta.env.VITE_API_URL}/products`, newProduct)
       .then((res) => {
         setProducts((prev) => [...prev, res.data])
         setpopAdd(false)
@@ -90,7 +90,7 @@ function Products() {
     e.preventDefault()
     if (!currentProduct) return;
 
-    axios.patch(`http://localhost:3001/products/${currentProduct.id}`, currentProduct)
+    axios.patch(`${import.meta.env.VITE_API_URL}/products/${currentProduct.id}`, currentProduct)
       .then((res) => {
         setProducts((prev) =>
           prev.map((p) => p.id === currentProduct.id ? res.data : p)
@@ -102,7 +102,7 @@ function Products() {
   }
 
   function removeproduct(id) {
-    axios.delete(`http://localhost:3001/products/${id}`)
+    axios.delete(`${import.meta.env.VITE_API_URL}/products/${id}`)
       .then((res) => {
         const updatedProducts = products.filter((product) => product.id !== id)
         setProducts(updatedProducts)

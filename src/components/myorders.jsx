@@ -9,7 +9,7 @@ function Myorders() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/orders`)
+    axios.get(`${import.meta.env.VITE_API_URL}/orders`)
       .then((res) => {
         const userOrders = res.data.filter(order => order.userid === userId)
         setOrders(userOrders || [])

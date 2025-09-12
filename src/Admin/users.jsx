@@ -10,7 +10,7 @@ function Users() {
   const userId = localStorage.getItem('id')
 
   useEffect(() => {
-    axios.get("http://localhost:3001/users")
+    axios.get(`${import.meta.env.VITE_API_URL}/users`)
       .then((res) => setUsers(res.data))
       .catch((err) => console.error(err))
   }, [userId])
@@ -26,7 +26,7 @@ function Users() {
     )
 
     axios
-      .patch(`http://localhost:3001/users/${id}`, { status: newStatus })
+      .patch(`${import.meta.env.VITE_API_URL}/users/${id}`, { status: newStatus })
       .catch((err) => {
         console.error(err)
       })

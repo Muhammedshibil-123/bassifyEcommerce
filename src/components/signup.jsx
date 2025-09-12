@@ -10,6 +10,7 @@ function Signup() {
     email: "",
     mobile: "",
     password: "",
+    status:"active"
   });
   const navigate = useNavigate();
   const [Validate, setValidate] = useState({});
@@ -53,7 +54,7 @@ function Signup() {
     setValidate(ValidateErrors);
 
     if (Object.keys(ValidateErrors).length === 0) {
-      axios.post("http://localhost:3001/users", Users)
+      axios.post(`${import.meta.env.VITE_API_URL}/users`, Users)
       .then(() => {
         setUsers({
           username: "",
@@ -61,6 +62,7 @@ function Signup() {
           email: "",
           mobile: "",
           password: "",
+          status:"active"
         })
       })
       .catch((err)=>console.log(err))

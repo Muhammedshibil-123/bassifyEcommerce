@@ -26,7 +26,7 @@ function Shop() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/products")
+      .get(`${import.meta.env.VITE_API_URL}/products`)
       .then((res) => {
         let filterdata = res.data.filter((product) => {
           return product.status === 'active'
@@ -36,7 +36,7 @@ function Shop() {
       .catch((err) => console.log(err));
 
     if (userId) {
-      axios.get(`http://localhost:3001/users/${userId}`)
+      axios.get(`${import.meta.env.VITE_API_URL}/users/${userId}`)
         .then((res) => setWishlist(res.data.whishlist || []))
     }
   }, [userId]);
@@ -55,7 +55,7 @@ function Shop() {
       return
     }
 
-    const userRespone = await axios.get(`http://localhost:3001/users/${userId}`)
+    const userRespone = await axios.get(`${import.meta.env.VITE_API_URL}/users/${userId}`)
     const userData = userRespone.data
     const currenCart = userData.cart || []
 
@@ -85,7 +85,7 @@ function Shop() {
         style: { marginTop: '60px' }
       })
 
-      await axios.put(`http://localhost:3001/users/${userId}`, {
+      await axios.put(`${import.meta.env.VITE_API_URL}/users/${userId}`, {
         ...userData,
         cart: updatedCart,
       })
@@ -172,7 +172,7 @@ function Shop() {
       return
     }
 
-    const userRespone = await axios.get(`http://localhost:3001/users/${userId}`)
+    const userRespone = await axios.get(`${import.meta.env.VITE_API_URL}/users/${userId}`)
     const userData = userRespone.data
     const currenwhishlist = userData.whishlist || []
 
@@ -202,7 +202,7 @@ function Shop() {
         style: { marginTop: '60px' }
       })
 
-      await axios.put(`http://localhost:3001/users/${userId}`, {
+      await axios.put(`${import.meta.env.VITE_API_URL}/users/${userId}`, {
         ...userData,
         whishlist: updatedwihislist,
       })

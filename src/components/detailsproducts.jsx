@@ -18,7 +18,7 @@ function Detailsproducts() {
    
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/products/${id}`)
+        axios.get(`${import.meta.env.VITE_API_URL}/products/${id}`)
             .then((res) => setProduct(res.data))
             .catch((err) => console.error(err))
     }, [id])
@@ -31,7 +31,7 @@ function Detailsproducts() {
   //     return
   //   }
 
-  //   const userRespone = await axios.get(`http://localhost:3001/users/${userId}`)
+  //   const userRespone = await axios.get(`${import.meta.env.VITE_API_URL}/users/${userId}`)
   //   const userData = userRespone.data
   //   const currenCart = userData.cart || []
 
@@ -61,7 +61,7 @@ function Detailsproducts() {
   //       style: { marginTop: '60px' }
   //     })
 
-  //     await axios.put(`http://localhost:3001/users/${userId}`, {
+  //     await axios.put(`${import.meta.env.VITE_API_URL}/users/${userId}`, {
   //       ...userData,
   //       cart: updatedCart,
   //     })

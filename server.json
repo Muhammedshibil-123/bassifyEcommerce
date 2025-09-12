@@ -208,6 +208,28 @@
       "connectivity": "wirelss",
       "status": "active",
       "id": 21
+    },
+    {
+      "title": "changed",
+      "brand": "realme",
+      "type": "neckband",
+      "description": "Beast Mode, RGB LEDs(6 Light Modes), 60HRS Playback & ENx Tech Bluetooth  (Black Sabre, On the Ear)",
+      "price": "5555",
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/t/k/l/-original-imah5h428mq9v8bb.jpeg?q=70",
+      "connectivity": "wirelss",
+      "status": "inactive",
+      "id": 22
+    },
+    {
+      "title": "realme second changed",
+      "brand": "realme",
+      "type": "neckband",
+      "description": "Beast Mode, RGB LEDs(6 Light Modes), 60HRS Playback & ENx Tech Bluetooth  (Black Sabre, On the Ear)",
+      "price": "333",
+      "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
+      "connectivity": "wirelss",
+      "status": "inactive",
+      "id": 23
     }
   ],
   "users": [
@@ -230,50 +252,7 @@
       "role": "admin",
       "status": "active",
       "id": 2,
-      "cart": [
-        {
-          "productId": 18,
-          "title": "Apple HomePod Smart Speaker",
-          "price": 32900,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/v/i/j/-original-imagm87dsvhg3uxf.jpeg?q=70",
-          "quantity": 7
-        },
-        {
-          "productId": 7,
-          "title": "JBL Tune 770NC Active Noise Cancelling Headphones",
-          "price": 5999,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/4/i/h/jblt770ncblk-jbl-original-imahewhwvyzbycr7.jpeg?q=70",
-          "quantity": 1
-        },
-        {
-          "productId": 4,
-          "title": "Apple AirPods (3rd generation) Bluetooth  ",
-          "price": 10999,
-          "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
-          "quantity": 1
-        },
-        {
-          "productId": 3,
-          "title": "realme Buds 3 wired ",
-          "price": 599,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/g/e/-original-imahbpxeqkyar4yq.jpeg?q=70",
-          "quantity": 1
-        },
-        {
-          "productId": 10,
-          "title": "SONY WF-LS900N Bluetooth Earbuds",
-          "price": 18990,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/p/i/4/wf-ls900-sony-original-imagjzsse8zyyfgf.jpeg?q=70",
-          "quantity": 1
-        },
-        {
-          "productId": 16,
-          "title": "SONY WH-CH720N Active Noise Cancelling Headphones",
-          "price": 8800,
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/y/x/y/-original-imagz2d8fkkf5vme.jpeg?q=70",
-          "quantity": 1
-        }
-      ],
+      "cart": [],
       "whishlist": [
         {
           "productId": 17,
@@ -339,13 +318,6 @@
           "quantity": 1
         },
         {
-          "productId": 19,
-          "title": "realme buds 5  changed",
-          "price": "8888",
-          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/t/k/l/-original-imah5h428mq9v8bb.jpeg?q=70",
-          "quantity": 1
-        },
-        {
           "productId": 2,
           "title": "OnePlus Bullets Wireless Z2 Bluetooth ",
           "price": 1349,
@@ -357,6 +329,27 @@
           "title": "Third Copy apple Earpods",
           "price": "15008",
           "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 4,
+          "title": "Apple AirPods (3rd generation) Bluetooth  ",
+          "price": 10999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 8,
+          "title": "OnePlus Nord Buds 3 Bluetooth Earbuds",
+          "price": 2299,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/r/3/g/-original-imah4d4k5s3wtupu.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 12,
+          "title": "boAt Rockerz 110 Bluetooth Neckband",
+          "price": 899,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/o/j/o/kerz-110-boat-original-imahenp57dwyavju.jpeg?q=70",
           "quantity": 1
         }
       ]
@@ -685,6 +678,42 @@
       "id": 11,
       "cart": [],
       "whishlist": []
+    },
+    {
+      "username": "sanu",
+      "age": "43",
+      "email": "sanuvkd104@gmail.com",
+      "mobile": "8989982830",
+      "password": "123456",
+      "id": 12,
+      "status": "active"
+    },
+    {
+      "username": "junaid",
+      "age": "55",
+      "email": "sanuvkd104@gmail.com",
+      "mobile": "8989982830",
+      "password": "123456",
+      "id": 13,
+      "status": "inactive"
+    },
+    {
+      "username": "monu",
+      "age": "44",
+      "email": "sanuvkd104@gmail.com",
+      "mobile": "8989982830",
+      "password": "123456",
+      "id": 14,
+      "status": "active"
+    },
+    {
+      "username": "adhi",
+      "age": "44",
+      "email": "sanuvkd104@gmail.com",
+      "mobile": "8989982830",
+      "password": "123456",
+      "status": "active",
+      "id": 15
     }
   ],
   "orders": [
@@ -1618,6 +1647,114 @@
         "pincode": "679333"
       },
       "id": 28
+    },
+    {
+      "username": "sanu",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 2,
+      "items": [
+        {
+          "productId": 18,
+          "title": "Apple HomePod Smart Speaker",
+          "price": 32900,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/v/i/j/-original-imagm87dsvhg3uxf.jpeg?q=70",
+          "quantity": 7
+        },
+        {
+          "productId": 7,
+          "title": "JBL Tune 770NC Active Noise Cancelling Headphones",
+          "price": 5999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/4/i/h/jblt770ncblk-jbl-original-imahewhwvyzbycr7.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 4,
+          "title": "Apple AirPods (3rd generation) Bluetooth  ",
+          "price": 10999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 3,
+          "title": "realme Buds 3 wired ",
+          "price": 599,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/x/g/e/-original-imahbpxeqkyar4yq.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 10,
+          "title": "SONY WF-LS900N Bluetooth Earbuds",
+          "price": 18990,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/p/i/4/wf-ls900-sony-original-imagjzsse8zyyfgf.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 16,
+          "title": "SONY WH-CH720N Active Noise Cancelling Headphones",
+          "price": 8800,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/y/x/y/-original-imagz2d8fkkf5vme.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "delivery": {
+        "name": "sanu",
+        "mobile": "8989982830",
+        "address": "safdfds",
+        "place": "vkd",
+        "pincode": "679333"
+      },
+      "id": 29
+    },
+    {
+      "username": "sanu",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 2,
+      "items": [
+        {
+          "productId": 5,
+          "title": "JBL Flip Essential 2 Bluetooth Speaker",
+          "price": 5999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/mobile-tablet-speaker/p/p/3/jblflipes2-jbl-original-imaghhxczcphv48d.jpeg?q=70",
+          "quantity": 2
+        }
+      ],
+      "delivery": {
+        "name": "sanu",
+        "mobile": "8989982830",
+        "address": "dfasf",
+        "place": "vkd",
+        "pincode": "1321321"
+      },
+      "id": 30
+    },
+    {
+      "username": "sanu",
+      "useremail": "sanuvkd104@gmail.com",
+      "userid": 2,
+      "items": [
+        {
+          "productId": 4,
+          "title": "Apple AirPods (3rd generation) Bluetooth  ",
+          "price": 10999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 5,
+          "title": "JBL Flip Essential 2 Bluetooth Speaker",
+          "price": 5999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/mobile-tablet-speaker/p/p/3/jblflipes2-jbl-original-imaghhxczcphv48d.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "delivery": {
+        "name": "sanu",
+        "mobile": "8989982830",
+        "address": "safdfds",
+        "place": "vkd",
+        "pincode": "1321321"
+      },
+      "id": 31
     }
   ]
 }

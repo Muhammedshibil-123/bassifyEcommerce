@@ -12,7 +12,7 @@ function Dashbaord() {
   const userId=localStorage.getItem('id')
 
    useEffect(() => {
-    axios.get("http://localhost:3001/products")
+    axios.get(`${import.meta.env.VITE_API_URL}/products`)
       .then((res) => {
         setProducts(res.data)
       })
@@ -20,7 +20,7 @@ function Dashbaord() {
   }, [userId])
 
    useEffect(() => {
-    axios.get("http://localhost:3001/users")
+    axios.get(`${import.meta.env.VITE_API_URL}/users`)
       .then((res) => {
         setUsers(res.data)
       })
@@ -28,7 +28,7 @@ function Dashbaord() {
   }, [userId])
 
    useEffect(() => {
-    axios.get("http://localhost:3001/orders")
+    axios.get(`${import.meta.env.VITE_API_URL}/orders`)
       .then((res) => {
         setOrders(res.data)
       })

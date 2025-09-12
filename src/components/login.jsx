@@ -35,7 +35,7 @@ function Login() {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:3001/users')
+    axios.get(`${import.meta.env.VITE_API_URL}/users`)
       .then((res) => setFetch(res.data))
       .catch((err) => console.error(err))
   }, [])

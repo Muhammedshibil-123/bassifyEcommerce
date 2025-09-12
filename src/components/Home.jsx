@@ -20,7 +20,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/products")
+      .get(`${import.meta.env.VITE_API_URL}/products`)
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -36,7 +36,7 @@ function Home() {
       return
     }
 
-    const userRespone = await axios.get(`http://localhost:3001/users/${userId}`)
+    const userRespone = await axios.get(`${import.meta.env.VITE_API_URL}/users/${userId}`)
     const userData = userRespone.data
     const currenCart = userData.cart || []
 
@@ -66,7 +66,7 @@ function Home() {
         style: { marginTop: '60px' }
       })
 
-      await axios.put(`http://localhost:3001/users/${userId}`, {
+      await axios.put(`${import.meta.env.VITE_API_URL}/users/${userId}`, {
         ...userData,
         cart: updatedCart,
       })

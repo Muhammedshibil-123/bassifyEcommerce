@@ -14,7 +14,7 @@ function Cart() {
   const {updateCartCount} = useContext(CartContext)
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/users/${userId}`)
+    axios.get(`${import.meta.env.VITE_API_URL}/users/${userId}`)
       .then((res) => setUser(res.data || []))
       .catch((err) => console.log(err))
   }, [userId])
@@ -25,7 +25,7 @@ function Cart() {
       cart: user.cart.filter((item) => item.productId !== id)
     }
     setUser(updatedCart)
-    axios.put(`http://localhost:3001/users/${userId}`, updatedCart)
+    axios.put(`${import.meta.env.VITE_API_URL}/users/${userId}`, updatedCart)
       .then((res)=> updateCartCount())
       .catch((err) => console.log(err))
 
@@ -44,7 +44,7 @@ function Cart() {
     const updateduser = { ...user, cart: updatedcart }
 
     setUser(updateduser)
-    axios.put(`http://localhost:3001/users/${userId}`, updateduser)
+    axios.put(`${import.meta.env.VITE_API_URL}/users/${userId}`, updateduser)
   }
 
   function decrementHandle(id) {
@@ -61,7 +61,7 @@ function Cart() {
     const updateduser = { ...user, cart: updatedcart }
 
     setUser(updateduser)
-    axios.put(`http://localhost:3001/users/${userId}`, updateduser)
+    axios.put(`${import.meta.env.VITE_API_URL}/users/${userId}`, updateduser)
   }
 
 

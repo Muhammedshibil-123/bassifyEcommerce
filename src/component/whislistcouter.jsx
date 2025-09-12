@@ -13,7 +13,7 @@ export function WhishlistProvider({ children }) {
 
     const updateWhislistCount = useCallback(() => {
         if (userId) {
-            axios.get(`http://localhost:3001/users/${userId}`)
+            axios.get(`${import.meta.env.VITE_API_URL}/users/${userId}`)
                 .then((res) => {
                     const userData = res.data
                     setWhislistcount(userData.whishlist ? userData.whishlist.length : 0)

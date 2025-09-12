@@ -8,7 +8,7 @@ function Orders() {
 
 
   useEffect(()=>{
-    axios.get("http://localhost:3001/orders")
+    axios.get(`${import.meta.env.VITE_API_URL}/orders`)
     .then((res)=>setOrders(res.data))
     .catch((err)=>console.error(err))
   },[userId])

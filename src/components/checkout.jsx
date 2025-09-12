@@ -25,7 +25,7 @@ function Checkout() {
   }
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/users/${userId}`)
+    axios.get(`${import.meta.env.VITE_API_URL}/users/${userId}`)
       .then((res) => setUser(res.data || []))
       .catch((err) => console.log(err))
   }, [userId])
@@ -43,7 +43,7 @@ function Checkout() {
     if(!details.name || !details.address || !details.pincode || !details.mobile || !details.place){
       alert('please fill the delivery details')
     }else{
-      axios.post('http://localhost:3001/orders',{
+      axios.post(`${import.meta.env.VITE_API_URL}/orders`,{
         
         username:user.username,
         useremail:user.email,
@@ -52,7 +52,7 @@ function Checkout() {
         delivery:details
       })
       .then(()=>{
-        return axios.put(`http://localhost:3001/users/${userId}`,{
+        return axios.put(`${import.meta.env.VITE_API_URL}/users/${userId}`,{
           ...user,
           cart:[]
         })
