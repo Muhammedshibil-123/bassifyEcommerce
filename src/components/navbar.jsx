@@ -42,7 +42,7 @@ function Navbar() {
     function shopRefresh() {
         setSearchTerm('');
         navigate('/shop');
-        window.location.reload()
+
     }
 
     return (

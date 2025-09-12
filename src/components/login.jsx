@@ -40,21 +40,24 @@ function Login() {
       .catch((err) => console.error(err))
   }, [])
 
-  function submit(e) {
-    e.preventDefault();
-    const ValidateErrors = validate(Users);
-    setValidate(ValidateErrors);
+ async function submit(e) {
+  e.preventDefault();
+  const ValidateErrors = validate(Users);
+  setValidate(ValidateErrors);
 
-    if (Object.keys(ValidateErrors).length === 0){
-      const userdata=fetch.find((details)=>{
-        return details.username === Users.username && details.password === Users.password
-      })
+  if (Object.keys(ValidateErrors).length === 0) {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/users`);
+      const allUsers = response.data;
 
-      if(userdata){
+      const userdata = allUsers.find((details) => {
+        return details.username === Users.username && details.password === Users.password;
+      });
 
-        if(userdata.status === 'inactive'){
-          setError('This User Blocked')
-        }else{
+      if (userdata) {
+        if (userdata.status === 'inactive') {
+          setError('This User is Blocked');
+        } else {
           localStorage.setItem('username',userdata.username)
         localStorage.setItem('age',userdata.age)
         localStorage.setItem('email',userdata.email)
@@ -63,17 +66,18 @@ function Login() {
         localStorage.setItem('role',userdata.role)
 
         
-            navigate('/',{replace:true})
+          navigate('/', { replace: true });
           window.location.reload()
         }
-
-        
-       
-      }else{
-        setError('User not found')
+      } else {
+        setError('User not found');
       }
+    } catch (err) {
+      setError('An error occurred. Please try again.');
+      console.error(err);
     }
   }
+}
 
   return (
     <div className="main-login-container">

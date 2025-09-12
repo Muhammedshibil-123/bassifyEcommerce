@@ -62,8 +62,8 @@ function App() {
             <Routes>
 
               <Route path='/' element={<Home />} />
-              <Route path='/login' element={!localStorage.getItem('id') ? <Login /> : <Navigate to={'/'} />} />
-              <Route path='/signup' element={!localStorage.getItem('id') ? <Signup /> : <Navigate to={'/'} />} />
+              <Route path='/login' element={<Login/>} />
+              <Route path='/signup' element={<Signup/>} />
               <Route path='/shop' element={<Shop />} />
               <Route path='/cart' element={<Cart />} />
               <Route path='/profile' element={<Profile />} />

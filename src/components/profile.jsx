@@ -13,7 +13,6 @@ function Profile() {
        function logouthandlechange(){
         localStorage.clear()
         navigate('/login')
-        window.location.reload()
        }
 
   return (

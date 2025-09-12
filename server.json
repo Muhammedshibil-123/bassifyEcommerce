@@ -252,7 +252,15 @@
       "role": "admin",
       "status": "active",
       "id": 2,
-      "cart": [],
+      "cart": [
+        {
+          "productId": 15,
+          "title": "SONY WI-C100 Bluetooth Neckband",
+          "price": 1499,
+          "image": "https://rukminim2.flixcart.com/image/612/612/l58iaa80/headphone/r/y/u/wi-c100-sony-original-imagfybgaubaxpk2.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
       "whishlist": [
         {
           "productId": 17,
@@ -444,6 +452,48 @@
           "price": 5999,
           "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/4/i/h/jblt770ncblk-jbl-original-imahewhwvyzbycr7.jpeg?q=70",
           "quantity": 2
+        },
+        {
+          "productId": 15,
+          "title": "SONY WI-C100 Bluetooth Neckband",
+          "price": 1499,
+          "image": "https://rukminim2.flixcart.com/image/612/612/l58iaa80/headphone/r/y/u/wi-c100-sony-original-imagfybgaubaxpk2.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 18,
+          "title": "Apple HomePod Smart Speaker",
+          "price": 32900,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/v/i/j/-original-imagm87dsvhg3uxf.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 12,
+          "title": "boAt Rockerz 110 Bluetooth Neckband",
+          "price": 899,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/o/j/o/kerz-110-boat-original-imahenp57dwyavju.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 17,
+          "title": "boAt Stone 350 Bluetooth Speaker",
+          "price": 1799,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/m/k/f/-original-imahez5ggh4a2sh4.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 4,
+          "title": "Apple AirPods (3rd generation) Bluetooth  ",
+          "price": 10999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/kwdv3bk0/headphone/q/o/x/-original-imag92pgct73fbvx.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 5,
+          "title": "JBL Flip Essential 2 Bluetooth Speaker",
+          "price": 5999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/mobile-tablet-speaker/p/p/3/jblflipes2-jbl-original-imaghhxczcphv48d.jpeg?q=70",
+          "quantity": 1
         }
       ],
       "whishlist": [
@@ -487,6 +537,13 @@
           "title": "OnePlus Bullets Wireless Z2 Bluetooth ",
           "price": 1349,
           "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/2/a/p/-original-imahef3zg3ewyvuq.jpeg?q=70",
+          "quantity": 1
+        },
+        {
+          "productId": 5,
+          "title": "JBL Flip Essential 2 Bluetooth Speaker",
+          "price": 5999,
+          "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/mobile-tablet-speaker/p/p/3/jblflipes2-jbl-original-imaghhxczcphv48d.jpeg?q=70",
           "quantity": 1
         }
       ]
