@@ -714,6 +714,15 @@
       "password": "123456",
       "status": "active",
       "id": 15
+    },
+    {
+      "username": "minnu",
+      "age": "55",
+      "email": "sanuvkd104@gmail.com",
+      "mobile": "8989982830",
+      "password": "123456",
+      "status": "active",
+      "id": 16
     }
   ],
   "orders": [

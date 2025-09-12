@@ -7,7 +7,6 @@ function Sidebar() {
 
      function handlelogout(){
         localStorage.clear()
-        navigate('/login')
         window.location.reload()
        }
     return (
@@ -22,7 +21,7 @@ function Sidebar() {
                         <NavLink to={'/admin/orders'} className='nav'><p>Orders</p></NavLink>
                         <NavLink to={'/'} className='nav' ><p>Product Home</p></NavLink>
                     </div>
-                    <button onClick={handlelogout}>Logout</button>
+                    <NavLink><button onClick={handlelogout}>Logout</button></NavLink>
                 </div>
                 <main className="admin-content">
                     <Outlet />
