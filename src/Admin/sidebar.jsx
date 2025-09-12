@@ -21,7 +21,7 @@ function Sidebar() {
                         <NavLink to={'/admin/orders'} className='nav'><p>Orders</p></NavLink>
                         <NavLink to={'/'} className='nav' ><p>Product Home</p></NavLink>
                     </div>
-                    <NavLink><button onClick={handlelogout}>Logout</button></NavLink>
+                    <NavLink to={'/login'}><button onClick={handlelogout}>Logout</button></NavLink>
                 </div>
                 <main className="admin-content">
                     <Outlet />
